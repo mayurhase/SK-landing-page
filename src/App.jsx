@@ -3,20 +3,20 @@ function App() {
     <div className="min-h-screen bg-[#0b0b0b] text-white font-body">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0b0b0b]/90 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-3">
-            <span className="inline-flex h-10 w-10 items-center justify-center bg-[#A65E1E] text-xl font-bold text-black">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <span className="inline-flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center bg-[#A65E1E] text-lg sm:text-xl font-bold text-black">
               SK
             </span>
-            <span className="text-xl font-bold">SK Auto World</span>
+            <span className="text-lg sm:text-xl font-bold">SK Auto World</span>
           </div>
-          <nav className="hidden items-center gap-8 md:flex">
-            <a className="text-gray-300 hover:text-white transition" href="#about">About</a>
-            <a className="text-gray-300 hover:text-white transition" href="#services">Services</a>
-            <a className="text-gray-300 hover:text-white transition" href="#location">Location</a>
-            <a className="text-gray-300 hover:text-white transition" href="#contact">Contact</a>
+          <nav className="hidden items-center gap-4 sm:gap-8 md:flex">
+            <a className="text-gray-300 hover:text-white transition text-sm sm:text-base" href="#about">About</a>
+            <a className="text-gray-300 hover:text-white transition text-sm sm:text-base" href="#services">Services</a>
+            <a className="text-gray-300 hover:text-white transition text-sm sm:text-base" href="#location">Location</a>
+            <a className="text-gray-300 hover:text-white transition text-sm sm:text-base" href="#contact">Contact</a>
           </nav>
-          <a href="tel:+917887870567" className="bg-[#A65E1E] px-6 py-2 text-black font-semibold hover:bg-[#b45309] transition">
+          <a href="tel:+917887870567" className="bg-[#A65E1E] px-3 sm:px-6 py-2 text-black font-semibold text-sm sm:text-base hover:bg-[#b45309] transition">
             Call 788 787 0567
           </a>
         </div>
