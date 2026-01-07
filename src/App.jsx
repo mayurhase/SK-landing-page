@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react';
+
 function App() {
   return (
     <div className="min-h-screen bg-[#0b0b0b] text-white font-body">
@@ -234,6 +236,8 @@ function App() {
           </div>
         </div>
       </footer>
+
+      <Analytics />
     </div>
   )
 }
