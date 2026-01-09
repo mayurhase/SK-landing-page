@@ -1,267 +1,243 @@
-const services = [
-  {
-    title: 'Express Fitment',
-    description: 'Brake pads, wipers, filters, and batteries installed while you wait.',
-  },
-  {
-    title: 'Diagnostics',
-    description: 'OBD scans, electrical checks, and warning light troubleshooting.',
-  },
-  {
-    title: 'Custom Orders',
-    description: 'Hard-to-find parts sourced fast with verified OEM alternatives.',
-  },
-]
-
-const categories = [
-  'Engine & Fluids',
-  'Suspension',
-  'Lighting',
-  'Accessories',
-  'Electrical',
-  'Tires & Wheels',
-]
-
-const socials = [
-  { label: 'Instagram', handle: '@torqueline.parts', href: '#' },
-  { label: 'Facebook', handle: '/torqueline.showroom', href: '#' },
-  { label: 'YouTube', handle: 'TorqueLine Garage', href: '#' },
-  { label: 'WhatsApp', handle: '+91 98765 43210', href: '#' },
-]
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#0b0c0f] font-body text-slate-100">
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute -top-24 -right-10 h-72 w-72 rounded-full bg-[#ff6b35]/30 blur-[120px]" />
-          <div className="absolute -bottom-32 left-0 h-72 w-72 rounded-full bg-[#3b82f6]/20 blur-[140px]" />
-          <div className="absolute right-10 top-1/3 h-40 w-40 rounded-full border border-white/10 bg-white/5 animate-drift" />
-        </div>
-
-        <header className="relative z-10">
-          <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-            <div className="flex items-center gap-3">
-              <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#ff6b35] text-2xl font-display text-black">
-                TL
-              </span>
-              <div>
-                <p className="text-lg font-display uppercase tracking-[0.2em] text-slate-200">
-                  TorqueLine
-                </p>
-                <p className="text-xs uppercase tracking-[0.3em] text-slate-400">
-                  Auto Parts + Service
-                </p>
-              </div>
-            </div>
-            <nav className="hidden items-center gap-8 text-sm text-slate-300 md:flex">
-              <a className="transition hover:text-white" href="#inventory">Inventory</a>
-              <a className="transition hover:text-white" href="#services">Services</a>
-              <a className="transition hover:text-white" href="#about">Showroom</a>
-              <a className="transition hover:text-white" href="#contact">Contact</a>
-            </nav>
-            <button className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-black transition hover:-translate-y-0.5 hover:bg-[#ff6b35] hover:text-black">
-              Book Service
-            </button>
-          </div>
-        </header>
-
-        <section className="relative z-10 mx-auto grid max-w-6xl items-center gap-12 px-6 pb-24 pt-10 lg:grid-cols-[1.2fr_0.8fr]">
-          <div className="space-y-6 animate-rise">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.3em] text-slate-200">
-              Full-Stack Auto Care
+    <div className="min-h-screen bg-[#0b0b0b] text-white font-body">
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#0b0b0b]/90 backdrop-blur-sm">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <span className="inline-flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center bg-[#A65E1E] text-lg sm:text-xl font-bold text-black">
+              SK
             </span>
-            <h1 className="text-4xl font-display uppercase tracking-[0.08em] text-white sm:text-5xl lg:text-6xl">
-              The showroom built for drivers who want parts, fitment, and trust in one stop.
+            <span className="text-lg sm:text-xl font-bold">SK Auto World</span>
+          </div>
+          <nav className="hidden items-center gap-4 sm:gap-8 md:flex">
+            <a className="text-gray-300 hover:text-white transition text-sm sm:text-base" href="#about">About</a>
+            <a className="text-gray-300 hover:text-white transition text-sm sm:text-base" href="#services">Services</a>
+            <a className="text-gray-300 hover:text-white transition text-sm sm:text-base" href="#location">Location</a>
+            <a className="text-gray-300 hover:text-white transition text-sm sm:text-base" href="#contact">Contact</a>
+          </nav>
+          <a href="tel:+917887870567" className="bg-[#A65E1E] px-3 sm:px-6 py-2 text-black font-semibold text-sm sm:text-base hover:bg-[#b45309] transition">
+            Call 788 787 0567
+          </a>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-center">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center">
+          <div className="absolute inset-0 bg-black/70"></div>
+        </div>
+        <div className="relative mx-auto max-w-7xl px-6">
+          <div className="max-w-2xl space-y-6">
+            <p className="text-[#d97706] font-semibold">Premium Auto Detailing Studio – Pune</p>
+            <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+              Professional Car Detailing & Paint Protection
             </h1>
-            <p className="max-w-xl text-base text-slate-300 sm:text-lg">
-              TorqueLine Auto Parts blends a premium parts gallery with certified service bays.
-              From quick replacements to performance upgrades, our team keeps your vehicle road-ready.
+            <p className="text-xl text-gray-300">
+              Ceramic, Graphene & PPF services done with precision, not shortcuts.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <button className="rounded-full bg-[#ff6b35] px-6 py-3 text-sm font-semibold text-black transition hover:-translate-y-0.5">
-                Browse Parts
-              </button>
-              <button className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/10">
-                Call +91 98765 43210
-              </button>
-            </div>
-            <div className="flex flex-wrap gap-6 text-sm text-slate-400">
-              <div>
-                <p className="text-xl font-semibold text-white">15k+</p>
-                <p>SKU-ready inventory</p>
-              </div>
-              <div>
-                <p className="text-xl font-semibold text-white">30 mins</p>
-                <p>Average fitment time</p>
-              </div>
-              <div>
-                <p className="text-xl font-semibold text-white">4.9/5</p>
-                <p>Customer rating</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-6 shadow-2xl shadow-black/40">
-            <div className="rounded-2xl bg-[#10131a] p-6">
-              <p className="text-sm uppercase tracking-[0.3em] text-slate-400">Today in the bay</p>
-              <h2 className="mt-3 text-2xl font-display uppercase text-white">Express Service Slots</h2>
-              <p className="mt-3 text-sm text-slate-400">
-                Walk-ins welcome. Reserve a slot for brakes, batteries, filters, or a quick diagnostic.
-              </p>
-              <div className="mt-6 space-y-4">
-                {['Brake pads + rotors', 'Battery health check', 'Alignment + suspension', 'Lighting upgrades'].map((item) => (
-                  <div key={item} className="flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm">
-                    <span className="text-slate-200">{item}</span>
-                    <span className="text-xs text-slate-500">Same day</span>
-                  </div>
-                ))}
-              </div>
-              <button className="mt-6 w-full rounded-xl bg-white px-4 py-3 text-sm font-semibold text-black">
-                Reserve a Service Bay
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <section id="services" className="mx-auto max-w-6xl px-6 py-20">
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Services</p>
-            <h2 className="mt-3 text-3xl font-display uppercase text-white">Built for fast fixes and deep care</h2>
-          </div>
-          <p className="max-w-md text-sm text-slate-400">
-            Certified technicians, premium tooling, and guided part selection for every drive style.
-          </p>
-        </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {services.map((service) => (
-            <div key={service.title} className="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-white/30">
-              <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-              <p className="mt-3 text-sm text-slate-400">{service.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="inventory" className="mx-auto max-w-6xl px-6 pb-20">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="rounded-3xl border border-white/10 bg-[#11151f] p-8">
-            <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Inventory</p>
-            <h2 className="mt-3 text-3xl font-display uppercase text-white">Curated parts wall</h2>
-            <p className="mt-4 text-sm text-slate-400">
-              Explore premium OEM and performance lines, organized by fitment and vehicle category.
-              Our advisors help you match spec, budget, and warranty.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              {categories.map((item) => (
-                <span key={item} className="rounded-full border border-white/15 px-4 py-2 text-xs uppercase tracking-[0.2em] text-slate-300">
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div className="grid gap-6">
-            <div className="rounded-2xl border border-white/10 bg-gradient-to-r from-white/10 to-transparent p-6">
-              <h3 className="text-lg font-semibold text-white">Performance Corner</h3>
-              <p className="mt-2 text-sm text-slate-400">
-                Intake, exhaust, suspension kits, and tuning-ready accessories.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-gradient-to-r from-[#ff6b35]/20 to-transparent p-6">
-              <h3 className="text-lg font-semibold text-white">Daily Driver Essentials</h3>
-              <p className="mt-2 text-sm text-slate-400">
-                Filters, oils, plugs, wipers, and bulbs always in stock.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-gradient-to-r from-[#3b82f6]/20 to-transparent p-6">
-              <h3 className="text-lg font-semibold text-white">Battery + Electrical</h3>
-              <p className="mt-2 text-sm text-slate-400">
-                Tested brands, warranty tracking, and installation support.
-              </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a href="tel:+917887870567" className="bg-[#A65E1E] px-8 py-3 text-black font-semibold text-center hover:bg-[#b45309] transition">
+                Call Now – 788 787 0567
+              </a>
+              <a href="https://wa.me/917887870567" target="_blank" rel="noopener noreferrer" className="border border-white px-8 py-3 text-center hover:bg-white hover:text-black transition">
+                WhatsApp
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="about" className="mx-auto max-w-6xl px-6 pb-20">
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-10">
-          <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-            <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Showroom</p>
-              <h2 className="mt-3 text-3xl font-display uppercase text-white">
-                A modern parts studio with a service-first mindset
-              </h2>
-              <p className="mt-4 text-sm text-slate-300">
-                Our showroom is built like a gallery: clean displays, guided fitment advisors, and a
-                transparent service bay that lets you see every step. You drive out with confidence.
-              </p>
-              <div className="mt-6 grid gap-4 text-sm text-slate-400 sm:grid-cols-2">
-                <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                  <p className="text-lg font-semibold text-white">Live Install View</p>
-                  <p className="mt-2">Watch parts being fitted before you hit the road.</p>
-                </div>
-                <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                  <p className="text-lg font-semibold text-white">Warranty Desk</p>
-                  <p className="mt-2">Fast returns, digital invoices, and verified sourcing.</p>
-                </div>
-              </div>
+      {/* Trust Strip */}
+      <section className="py-16 bg-[#111111]">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="space-y-2">
+              <div className="text-3xl">⭐</div>
+              <p className="font-semibold">Premium Products</p>
             </div>
+            <div className="space-y-2">
+              <div className="text-3xl">👨‍🔧</div>
+              <p className="font-semibold">Experienced Technicians</p>
+            </div>
+            <div className="space-y-2">
+              <div className="text-3xl">🛡️</div>
+              <p className="font-semibold">Long-Term Protection</p>
+            </div>
+            <div className="space-y-2">
+              <div className="text-3xl">🎯</div>
+              <p className="font-semibold">Attention to Detail</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-16 text-center">
+            <h2 className="text-4xl font-bold mb-4">Our Services</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Professional detailing services using premium products and techniques
+            </p>
+          </div>
+          <div className="space-y-8">
+            <div className="flex flex-col md:flex-row md:items-center justify-between py-6 border-b border-gray-800">
+              <h3 className="text-2xl font-bold">Ceramic Coating</h3>
+              <p className="text-gray-400 mt-2 md:mt-0">Long-lasting gloss & protection</p>
+            </div>
+            <div className="flex flex-col md:flex-row md:items-center justify-between py-6 border-b border-gray-800">
+              <h3 className="text-2xl font-bold">Graphene Coating</h3>
+              <p className="text-gray-400 mt-2 md:mt-0">Advanced durability & heat resistance</p>
+            </div>
+            <div className="flex flex-col md:flex-row md:items-center justify-between py-6 border-b border-gray-800">
+              <h3 className="text-2xl font-bold">Paint Protection Film (PPF)</h3>
+              <p className="text-gray-400 mt-2 md:mt-0">Invisible impact protection</p>
+            </div>
+            <div className="flex flex-col md:flex-row md:items-center justify-between py-6 border-b border-gray-800">
+              <h3 className="text-2xl font-bold">Premium Car Wash</h3>
+              <p className="text-gray-400 mt-2 md:mt-0">Safe, swirl-free wash</p>
+            </div>
+            <div className="flex flex-col md:flex-row md:items-center justify-between py-6 border-b border-gray-800">
+              <h3 className="text-2xl font-bold">Deep Interior & Exterior Cleaning</h3>
+              <p className="text-gray-400 mt-2 md:mt-0">Complete vehicle refresh</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section id="about" className="py-20 bg-[#111111]">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
-              <div className="rounded-2xl border border-white/10 bg-[#121826] p-6">
-                <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Hours</p>
-                <p className="mt-3 text-lg font-semibold text-white">Mon - Sat: 9:00 AM - 8:00 PM</p>
-                <p className="text-sm text-slate-400">Sunday: 10:00 AM - 4:00 PM</p>
+              <h2 className="text-4xl font-bold">Why Choose SK Auto World</h2>
+              <div className="space-y-4 text-gray-300">
+                <p>• No rushed jobs – each vehicle gets proper attention</p>
+                <p>• Proper surface prep & curing for maximum durability</p>
+                <p>• Premium-grade materials from trusted manufacturers</p>
+                <p>• Each car treated individually, not assembly-line style</p>
+                <p>• Focus on long-term protection, not just temporary shine</p>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-[#121826] p-6">
-                <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Location</p>
-                <p className="mt-3 text-lg font-semibold text-white">Sector 18, Auto Market</p>
-                <p className="text-sm text-slate-400">Noida, Uttar Pradesh</p>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-[#121826] p-6">
-                <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Call for fitment</p>
-                <p className="mt-3 text-lg font-semibold text-white">+91 98765 43210</p>
-                <p className="text-sm text-slate-400">support@torqueline.auto</p>
-              </div>
+            </div>
+            <div className="bg-gray-800 h-96 flex items-center justify-center">
+              <p className="text-gray-400">[Detailing Process Image Placeholder]</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-6xl px-6 pb-24">
-        <div className="flex flex-wrap items-end justify-between gap-8">
-          <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Connect</p>
-            <h2 className="mt-3 text-3xl font-display uppercase text-white">Follow the build</h2>
+      {/* Proof Section */}
+      <section className="py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Our Work Speaks</h2>
+            <p className="text-gray-400">Real results from satisfied customers</p>
           </div>
-          <button className="rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/5">
-            Get Directions
-          </button>
-        </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {socials.map((social) => (
-            <a
-              key={social.label}
-              href={social.href}
-              className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-6 py-5 transition hover:-translate-y-1 hover:border-white/30"
-            >
-              <div>
-                <p className="text-sm uppercase tracking-[0.3em] text-slate-500">{social.label}</p>
-                <p className="mt-2 text-lg font-semibold text-white">{social.handle}</p>
-              </div>
-              <span className="text-sm text-slate-400">Open</span>
-            </a>
-          ))}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-gray-800 h-64 flex items-center justify-center">
+              <p className="text-gray-400">[Before & After Image 1]</p>
+            </div>
+            <div className="bg-gray-800 h-64 flex items-center justify-center">
+              <p className="text-gray-400">[Before & After Image 2]</p>
+            </div>
+            <div className="bg-gray-800 h-64 flex items-center justify-center">
+              <p className="text-gray-400">[Before & After Image 3]</p>
+            </div>
+          </div>
+          <div className="text-center space-y-4">
+            <div className="flex items-center justify-center gap-2">
+              <span className="text-2xl">⭐⭐⭐⭐⭐</span>
+              <span className="text-xl font-semibold">4.9/5 Google Rating</span>
+            </div>
+            <div className="bg-gray-800 p-6 max-w-2xl mx-auto">
+              <p className="text-gray-300 italic">
+                "Outstanding service! My car looks brand new after the ceramic coating. Highly recommend SK Auto World."
+              </p>
+              <p className="text-[#d97706] mt-2">- Rajesh K., Pune</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <footer className="border-t border-white/10 py-10">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-sm text-slate-500 md:flex-row">
-          <p>TorqueLine Auto Parts & Service. Built for the road ahead.</p>
-          <p>Parts. Service. Fitment. Warranty.</p>
+      {/* Location & Contact */}
+      <section id="location" className="py-20 bg-[#111111]">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid md:grid-cols-2 gap-16">
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl font-bold mb-4">Address</h3>
+                <p className="text-gray-300">
+                  JAWALKAR NAGAR, opp. Dreams Sunshine Apartment<br />
+                  Pimpale Gurav, Pune, Maharashtra 411061
+                </p>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-4">Phone</h3>
+                <a href="tel:+917887870567" className="text-[#d97706] text-xl font-semibold hover:text-[#b45309] transition">
+                  +91 788 787 0567
+                </a>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-4">Business Hours</h3>
+                <div className="text-gray-300 space-y-1">
+                  <p>Mon - Sat: 9:00 AM - 9:00 PM</p>
+                  <p>Sunday: 10:00 AM - 4:00 PM</p>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold">Find Us</h3>
+              <div className="bg-gray-800 h-64 flex items-center justify-center">
+                <p className="text-gray-400">[Google Maps Embed Placeholder]</p>
+              </div>
+              <a href="#" className="inline-block bg-[#A65E1E] px-8 py-3 text-black font-semibold hover:bg-[#b45309] transition">
+                Get Directions
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 bg-[#0b0b0b] border-t border-gray-800">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <h4 className="font-bold text-lg mb-4">SK Auto World</h4>
+              <p className="text-gray-400 text-sm">
+                Premium auto detailing studio in Pune, specializing in ceramic coatings, PPF, and professional car care.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold text-lg mb-4">Services</h4>
+              <ul className="text-gray-400 text-sm space-y-2">
+                <li>Ceramic Coating</li>
+                <li>Paint Protection Film</li>
+                <li>Graphene Coating</li>
+                <li>Deep Cleaning</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold text-lg mb-4">Phone</h4>
+              <a href="tel:+917887870567" className="text-[#d97706] hover:text-[#b45309] transition">
+                +91 788 787 0567
+              </a>
+            </div>
+            <div>
+              <h4 className="font-bold text-lg mb-4">Location</h4>
+              <p className="text-gray-400 text-sm">
+                JAWALKAR NAGAR<br />
+                Pimpale Gurav, Pune
+              </p>
+            </div>
+          </div>
         </div>
       </footer>
+
+      <Analytics />
     </div>
   )
 }
