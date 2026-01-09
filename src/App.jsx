@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 function App() {
   return (
@@ -7,9 +8,11 @@ function App() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0b0b0b]/90 backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center gap-2 sm:gap-3">
-            <span className="inline-flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center bg-[#A65E1E] text-lg sm:text-xl font-bold text-black">
-              SK
-            </span>
+            <img
+              src="/assets/logo.jpeg"
+              alt="SK Auto World logo"
+              className="h-8 w-8 sm:h-10 sm:w-10 rounded-md object-cover"
+            />
             <span className="text-lg sm:text-xl font-bold">SK Auto World</span>
           </div>
           <nav className="hidden items-center gap-4 sm:gap-8 md:flex">
@@ -18,7 +21,7 @@ function App() {
             <a className="text-gray-300 hover:text-white transition text-sm sm:text-base" href="#location">Location</a>
             <a className="text-gray-300 hover:text-white transition text-sm sm:text-base" href="#contact">Contact</a>
           </nav>
-          <a href="tel:+917887870567" className="bg-[#A65E1E] px-3 sm:px-6 py-2 text-black font-semibold text-sm sm:text-base hover:bg-[#b45309] transition">
+          <a href="tel:+917887870567" className="bg-[#f59e0b] px-3 sm:px-6 py-2 text-black font-semibold text-sm sm:text-base hover:bg-[#d97706] transition">
             Call 788 787 0567
           </a>
         </div>
@@ -39,7 +42,7 @@ function App() {
               Ceramic, Graphene & PPF services done with precision, not shortcuts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:+917887870567" className="bg-[#A65E1E] px-8 py-3 text-black font-semibold text-center hover:bg-[#b45309] transition">
+              <a href="tel:+917887870567" className="bg-[#f59e0b] px-8 py-3 text-black font-semibold text-center hover:bg-[#d97706] transition">
                 Call Now – 788 787 0567
               </a>
               <a href="https://wa.me/917887870567" target="_blank" rel="noopener noreferrer" className="border border-white px-8 py-3 text-center hover:bg-white hover:text-black transition">
@@ -109,93 +112,82 @@ function App() {
       </section>
 
       {/* Why Choose Us */}
-      <section id="about" className="py-20 bg-[#111111]">
+      <section id="about" className="py-20 bg-black">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
               <h2 className="text-4xl font-bold">Why Choose SK Auto World</h2>
-              <div className="space-y-4 text-gray-300">
-                <p>• No rushed jobs – each vehicle gets proper attention</p>
-                <p>• Proper surface prep & curing for maximum durability</p>
-                <p>• Premium-grade materials from trusted manufacturers</p>
-                <p>• Each car treated individually, not assembly-line style</p>
-                <p>• Focus on long-term protection, not just temporary shine</p>
-              </div>
+              <ul className="space-y-4 text-gray-300">
+                <li className="flex gap-3">
+                  <span className="mt-2 h-2 w-2 rounded-full bg-[#f59e0b]" />
+                  <p>
+                    <span className="font-semibold text-white">No rushed work.</span> We give every car the time it actually needs.
+                  </p>
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-2 h-2 w-2 rounded-full bg-[#f59e0b]" />
+                  <p>
+                    <span className="font-semibold text-white">Proper preparation & curing.</span> So coatings last longer, not just look good for a week.
+                  </p>
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-2 h-2 w-2 rounded-full bg-[#f59e0b]" />
+                  <p>
+                    <span className="font-semibold text-white">Premium-quality materials.</span> We use trusted, professional-grade products only.
+                  </p>
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-2 h-2 w-2 rounded-full bg-[#f59e0b]" />
+                  <p>
+                    <span className="font-semibold text-white">One car at a time.</span> Your vehicle is not treated like part of an assembly line.
+                  </p>
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-2 h-2 w-2 rounded-full bg-[#f59e0b]" />
+                  <p>
+                    <span className="font-semibold text-white">Long-term protection.</span> We focus on durability, not temporary shine.
+                  </p>
+                </li>
+              </ul>
             </div>
-            <div className="bg-gray-800 h-96 flex items-center justify-center">
-              <p className="text-gray-400">[Detailing Process Image Placeholder]</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Proof Section */}
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our Work Speaks</h2>
-            <p className="text-gray-400">Real results from satisfied customers</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-gray-800 h-64 flex items-center justify-center">
-              <p className="text-gray-400">[Before & After Image 1]</p>
-            </div>
-            <div className="bg-gray-800 h-64 flex items-center justify-center">
-              <p className="text-gray-400">[Before & After Image 2]</p>
-            </div>
-            <div className="bg-gray-800 h-64 flex items-center justify-center">
-              <p className="text-gray-400">[Before & After Image 3]</p>
-            </div>
-          </div>
-          <div className="text-center space-y-4">
-            <div className="flex items-center justify-center gap-2">
-              <span className="text-2xl">⭐⭐⭐⭐⭐</span>
-              <span className="text-xl font-semibold">4.9/5 Google Rating</span>
-            </div>
-            <div className="bg-gray-800 p-6 max-w-2xl mx-auto">
-              <p className="text-gray-300 italic">
-                "Outstanding service! My car looks brand new after the ceramic coating. Highly recommend SK Auto World."
-              </p>
-              <p className="text-[#d97706] mt-2">- Rajesh K., Pune</p>
+            <div className="h-96 overflow-hidden rounded-lg">
+              <img
+                src="/assets/logo.jpeg"
+                alt="Detailing process"
+                className="h-full w-full object-cover"
+              />
             </div>
           </div>
         </div>
       </section>
-
       {/* Location & Contact */}
-      <section id="location" className="py-20 bg-[#111111]">
+<section id="location" className="py-20 bg-[#111111]">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="grid md:grid-cols-2 gap-16">
-            <div className="space-y-8">
+          <div className="space-y-6">
+            <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
-                <h3 className="text-2xl font-bold mb-4">Address</h3>
-                <p className="text-gray-300">
-                  JAWALKAR NAGAR, opp. Dreams Sunshine Apartment<br />
-                  Pimpale Gurav, Pune, Maharashtra 411061
-                </p>
+                <h3 className="text-2xl font-bold">Find Us</h3>
+                <p className="text-gray-300">Tap for directions or explore nearby.</p>
               </div>
-              <div>
-                <h3 className="text-2xl font-bold mb-4">Phone</h3>
-                <a href="tel:+917887870567" className="text-[#d97706] text-xl font-semibold hover:text-[#b45309] transition">
-                  +91 788 787 0567
-                </a>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold mb-4">Business Hours</h3>
-                <div className="text-gray-300 space-y-1">
-                  <p>Mon - Sat: 9:00 AM - 9:00 PM</p>
-                  <p>Sunday: 10:00 AM - 4:00 PM</p>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold">Find Us</h3>
-              <div className="bg-gray-800 h-64 flex items-center justify-center">
-                <p className="text-gray-400">[Google Maps Embed Placeholder]</p>
-              </div>
-              <a href="#" className="inline-block bg-[#A65E1E] px-8 py-3 text-black font-semibold hover:bg-[#b45309] transition">
+              <a
+                href="https://maps.app.goo.gl/stwBpjgfHyXkUDvv7?g_st=iw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#f59e0b] px-8 py-3 text-black font-semibold hover:bg-[#d97706] transition"
+              >
                 Get Directions
               </a>
+            </div>
+            <div className="space-y-4">
+              <div className="overflow-hidden rounded-lg border border-gray-800">
+                <iframe
+                  title="SK Auto World map"
+                  src="https://www.google.com/maps?q=JAWALKAR%20NAGAR%2C%20opp.%20Dreams%20Sunshine%20Apartment%2C%20Pimpale%20Gurav%2C%20Pune%2C%20Maharashtra%20411061&output=embed"
+                  className="h-80 w-full"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -221,21 +213,37 @@ function App() {
               </ul>
             </div>
             <div>
-              <h4 className="font-bold text-lg mb-4">Phone</h4>
-              <a href="tel:+917887870567" className="text-[#d97706] hover:text-[#b45309] transition">
-                +91 788 787 0567
-              </a>
+              <h4 className="font-bold text-lg mb-4">Address</h4>
+              <p className="text-gray-400 text-sm">
+                JAWALKAR NAGAR, opp. Dreams Sunshine Apartment<br />
+                Pimpale Gurav, Pune, Maharashtra 411061
+              </p>
             </div>
             <div>
-              <h4 className="font-bold text-lg mb-4">Location</h4>
-              <p className="text-gray-400 text-sm">
-                JAWALKAR NAGAR<br />
-                Pimpale Gurav, Pune
-              </p>
+              <h4 className="font-bold text-lg mb-4">Phone</h4>
+              <a href="tel:+917887870567" className="text-[#d97706] hover:text-[#d97706] transition">
+                +91 788 787 0567
+              </a>
+              <p className="mt-3 text-gray-400 text-sm">skautoworld567@gmail.com</p>
+              <h4 className="mt-6 font-bold text-lg mb-4">Business Hours</h4>
+              <div className="text-gray-400 text-sm space-y-1">
+                <p>Mon - Sat: 9:00 AM - 9:00 PM</p>
+                <p>Sunday: 10:00 AM - 4:00 PM</p>
+              </div>
             </div>
           </div>
         </div>
       </footer>
+
+      <a
+        href="https://wa.me/917887870567"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+        aria-label="Chat on WhatsApp"
+      >
+        <FaWhatsapp className="h-7 w-7" />
+      </a>
 
       <Analytics />
     </div>
