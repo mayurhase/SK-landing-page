@@ -36,10 +36,10 @@ function App() {
           <div className="max-w-2xl space-y-6">
             <p className="text-[#d97706] font-semibold">Premium Auto Detailing Studio – Pune</p>
             <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-              Professional Car Detailing & Paint Protection
+              Professional Car Detailing Studio 
             </h1>
             <p className="text-xl text-gray-300">
-              Ceramic, Graphene & PPF services done with precision, not shortcuts.
+              We specialize in ceramic, graphene coating, and PPF services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:+917887870567" className="bg-[#f59e0b] px-8 py-3 text-black font-semibold text-center hover:bg-[#d97706] transition">
@@ -161,7 +161,7 @@ function App() {
         </div>
       </section>
       {/* Location & Contact */}
-<section id="location" className="py-20 bg-[#111111]">
+      <section id="location" className="py-20 bg-[#111111]">
         <div className="mx-auto max-w-7xl px-6">
           <div className="space-y-6">
             <div className="flex flex-wrap items-center justify-between gap-4">
@@ -210,6 +210,7 @@ function App() {
                 <li>Paint Protection Film</li>
                 <li>Graphene Coating</li>
                 <li>Deep Cleaning</li>
+                <li>Premium Car Wash</li>
               </ul>
             </div>
             <div>
@@ -227,8 +228,8 @@ function App() {
               <p className="mt-3 text-gray-400 text-sm">skautoworld567@gmail.com</p>
               <h4 className="mt-6 font-bold text-lg mb-4">Business Hours</h4>
               <div className="text-gray-400 text-sm space-y-1">
-                <p>Mon - Sat: 9:00 AM - 9:00 PM</p>
-                <p>Sunday: 10:00 AM - 4:00 PM</p>
+                <p>Mon - Sun: 9:00 AM - 9:00 PM</p>
+                <p>Thursday: Closed</p>
               </div>
             </div>
           </div>
